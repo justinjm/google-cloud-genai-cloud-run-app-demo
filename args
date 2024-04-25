@@ -1,0 +1,30 @@
+PROJECT_ID=$(gcloud config get-value project)
+PROJECT_NUMBER=$(gcloud projects describe $(gcloud config get-value project) --format='value(projectNumber)')
+REGION="us-central1"
+DEFAULT_SVC_ACCOUNT_EMAIL="$PROJECT_NUMBER-compute@developer.gserviceaccount.com"
+APP_NAME="genai-app-cloud-run-app-demo"
+
+SVC_ACCOUNT_NAME=$APP_NAME
+SVC_ACCOUNT_EMAIL="$APP_NAME@$PROJECT_ID.iam.gserviceaccount.com"
+DOCKER_REPO="$APP_NAME-repo"
+IMAGE_NAME="$APP_NAME-image"
+IMAGE_TAG="latest"
+IMAGE_URI="$REGION-docker.pkg.dev/$PROJECT_ID/$DOCKER_REPO/$IMAGE_NAME:$IMAGE_TAG"
+CLOUD_RUN_SERVICE_NAME="$APP_NAME"
+
+
+echo "==================== args ====================================================================="
+echo "PROJECT_ID:                  " $PROJECT_ID
+echo "PROJECT_NUMBER:              " $PROJECT_NUMBER
+echo "REGION:                      " $REGION
+echo "DEFAULT_SVC_ACCOUNT_EMAIL:   " $DEFAULT_SVC_ACCOUNT_EMAIL
+echo "SVC_ACCOUNT_NAME:            " $SVC_ACCOUNT_NAME
+echo "SVC_ACCOUNT_EMAIL:           " $SVC_ACCOUNT_EMAIL
+echo "DOCKER_REPO:                 " $DOCKER_REPO
+echo "IMAGE_NAME:                  " $IMAGE_NAME
+echo "IMAGE_TAG:                   " $IMAGE_TAG
+echo "IMAGE_URI:                   " $IMAGE_URI
+echo "CLOUD_RUN_SERVICE_NAME:      " $CLOUD_RUN_SERVICE_NAME
+echo "================================================================================================="
+
+

@@ -1,0 +1,23 @@
+#.gitignore
+
+## python
+.venv*
+*checkpoint*
+*__pycache__*
+.env
+
+## gradio app images
+temp_image_*
+flagged/*
+
+# langchain
+*.parquet
+*.bin
+*.pkl
+
+## R 
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Renviron*
