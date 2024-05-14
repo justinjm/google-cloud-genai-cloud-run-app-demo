@@ -29,15 +29,7 @@ The following steps are required, regardless of your environment:
 2. [Make sure that billing is enabled for your project](https://cloud.google.com/billing/docs/how-to/modify-project).
 3. Have the project ID handy and enter it in the next command below to authenticate.
 
-## Setup local environement
-
-### Install dependencies
-
-Install the following if not using an authenticated environment (e.g. - local machine)
-
-* [Cloud SDK](https://cloud.google.com/sdk) - gcloud SDK to run the commands below
-
-### App Code Files
+## App Code Files
 
 This repository includes files to run this example e2e. If you wish to use the demo app included in this repository, you can skip this step.
 
@@ -58,7 +50,11 @@ gcloud config set project <YOUR-PROJECT-ID>
 gcloud auth application-default login
 ```
 
+## Setup GCP Environment
+
 ### Enable APIs
+
+Now that we are authenticated, we can enable the APIs we need by running the following:
 
 ```sh
 gcloud services enable \
@@ -69,6 +65,8 @@ gcloud services enable \
 ```
 
 ## Build Image
+
+Next, we build the image with our app that will be deployed to Cloud Run.
 
 ### Create Artifact Registry (docker repository)
 
