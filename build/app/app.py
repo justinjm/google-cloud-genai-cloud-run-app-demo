@@ -39,7 +39,7 @@ def predict(prompt, max_output_tokens, temperature):
 examples = [
     ["What are some generative AI services on Google Cloud in Public Preview?"],
     ["What is the capital of United States?"],
-    ["Suggest a recipe for chocolate chip cookies?"],
+    ["Suggest a recipe for chocolate chip cookies"],
 ]
 
 # Title and Text Section
