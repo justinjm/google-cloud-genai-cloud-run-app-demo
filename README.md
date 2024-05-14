@@ -2,11 +2,38 @@
 
 An example of how to deploy a GenAI app built with Python to Google Cloud Run.
 
+## Getting Started
+
+### Recommended - Cloud Shell
+
+For an interactive tutorial within the Google Cloud Console and using [Cloud Shell](https://cloud.google.com/shell) click the button below:
+
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/bigquery/?cloudshell_git_repo=https://github.com/justinjm/google-cloud-genai-cloud-run-app-demo&cloudshell_tutorial=README.md)
+
+### Alternative - Local Machine
+
+Alternatively, can work from your local machine by 1) installing the [`gcloud` CLI](https://cloud.google.com/sdk/docs/install-sdk) and then 2) cloniog this repository via:
+
+```sh
+git clone https://github.com/justinjm/google-cloud-genai-cloud-run-app-demo \
+  && cd google-cloud-genai-cloud-run-app-demo/
+```
+
+## Setup GCP Project
+
+### Before you begin
+
+The following steps are required, regardless of your environment:
+
+1. [Select or create a Google Cloud project](https://console.cloud.google.com/cloud-resource-manager). When you first create an account, you get a $300 free credit towards your compute/storage costs.
+2. [Make sure that billing is enabled for your project](https://cloud.google.com/billing/docs/how-to/modify-project).
+3. Have the project ID handy and enter it in the next command below to authenticate.
+
 ## Setup local environement
 
 ### Install dependencies
 
-Install the following if not using an authenticated environment (e.g. - a Vertex AI Workbench Notebook instance)
+Install the following if not using an authenticated environment (e.g. - local machine)
 
 * [Cloud SDK](https://cloud.google.com/sdk) - gcloud SDK to run the commands below
 
@@ -20,16 +47,6 @@ If you'd like to use this repo with your own code/app, you'll need to:
 2. Update requirements.txt to directory `build/app`
 3. Update the Dockerfile
 4. update the `args` file accordingly with your `APP_NAME` and any other modficiations you'd like.
-
-## Setup GCP Project
-
-### Before you begin
-
-The following steps are required, regardless of your environment:
-
-1. [Select or create a Google Cloud project](https://console.cloud.google.com/cloud-resource-manager). When you first create an account, you get a $300 free credit towards your compute/storage costs.
-2. [Make sure that billing is enabled for your project](https://cloud.google.com/billing/docs/how-to/modify-project).
-3. Have the project ID handy and enter it in the next command below to authenticate.
 
 ### Authenticate
 
