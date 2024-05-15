@@ -4,6 +4,8 @@ An example of how to deploy a GenAI app built with Python to Google Cloud Run.
 
 ![Demo app screenshot](img/app-screenshot.png)
 
+**Note:** this repository deploys a demo Cloud Run app that allows unauthenticated access; anyone with the link can access the app. To avoid any unexpected usage or cost, undeploy or  disable unauthenticated access to the Cloud Run service. See more details in Cloud Run documentation [here](https://cloud.google.com/run/docs/authenticating/public#gcloud) and how to do so via [gcloud CLI](https://cloud.google.com/sdk/gcloud/reference/run/deploy)
+
 ## Getting Started
 
 ### Recommended - Cloud Shell
