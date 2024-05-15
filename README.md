@@ -29,16 +29,17 @@ The following steps are required, regardless of your environment:
 2. [Make sure that billing is enabled for your project](https://cloud.google.com/billing/docs/how-to/modify-project).
 3. Have the project ID handy and enter it in the next command below to authenticate.
 
-## App Code Files
+## Setup App Code Files
 
-This repository includes files to run this example e2e. If you wish to use the demo app included in this repository, you can skip this step.
+This repository includes a sample app to deploy to Cloud Run. If you wish to use the demo app included in this repository, you can skip this step.
 
-If you'd like to use this repo with your own code/app, you'll need to:
+If you'd like to use this repo with your own app code, you'll need to:
 
 1. Add your Python app files to the directory `build/app`
-2. Update requirements.txt to directory `build/app`
-3. Update the Dockerfile
-4. update the `args` file accordingly with your `APP_NAME` and any other modficiations you'd like.
+2. Update the `config.py` script with your project ID, region and model 
+3. Update requirements.txt with the necessary python modules
+4. Update the Dockerfile with any necessary changes
+5. update the `args` file accordingly with your `APP_NAME` and any other modficiations you'd like to the arguements
 
 ### Authenticate
 
