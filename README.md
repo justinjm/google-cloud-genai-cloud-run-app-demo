@@ -2,6 +2,8 @@
 
 An example of how to deploy a GenAI app built with Python to Google Cloud Run.
 
+![Demo app screenshot](img/app-screenshot.png)
+
 ## Getting Started
 
 ### Recommended - Cloud Shell
